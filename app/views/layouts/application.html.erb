@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BudgetApp</title>
+    <title>Budget App</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,8 +11,14 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <% if notice %>
+      <p class="absolute top-0 z-20 p-2 text-center text-white bg-secondary-800"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="absolute top-0 z-20 p-2 text-center text-white bg-red-800"><%= alert %></p>  
+    <% end %>
+    <main>
     <%= yield %>
+    </main>
   </body>
 </html>

@@ -1,0 +1,11 @@
+<div>
+  <h1 class="heading"> Budget App </h1>
+  <div>
+    <% if user_signed_in?  %>
+      <%= link_to 'Categories', categories_path %>
+    <% else %>
+      <%= link_to 'Log in', new_user_session_path, class: "user-login" %>
+      <%= link_to 'Sign up', new_user_registration_path, class: "user-signup" %>
+    <% end %>
+  </div>
+</div>
