@@ -5,6 +5,8 @@ class MoneyGroup < ApplicationRecord
   after_create :increment_amount
   before_destroy :decrement_amount
 
+  private
+
   def increment_amount
     current_amount = group.total_amount
     group.update(total_amount: current_amount + operation.amount)
