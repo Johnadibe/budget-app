@@ -6,7 +6,7 @@ class Group < ApplicationRecord
   validates :name, presence: true, length: { minimum: 3 }
   validates :icon, presence: true
 
-  def ordered_transaction
+  def ordered_transactions
     operations.order(created_at: :desc)
   end
 end
