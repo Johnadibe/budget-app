@@ -1,0 +1,15 @@
+<section>
+ <%= render 'shared/header', :title => 'Transactions' %>
+  <div>
+    <h2> Total amount: $<%= @group.total_amount %> </h2>
+  </div>
+  <ul>
+    <% @transactions.each do |transaction| %>
+      <li>
+        <h2> <%= transaction.name %> </h2>
+        <p> $<%= transaction.amount %> </p>
+      </li>
+    <% end %>
+  </ul>
+  <%= link_to 'Add a new transaction', new_category_transaction_path(category_id: @group.id) %>
+</section>

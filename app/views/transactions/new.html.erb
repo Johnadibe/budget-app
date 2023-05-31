@@ -1,0 +1,23 @@
+<%= render 'shared/header', :title => 'Transaction' %>
+<div>
+  <%= form_with model: operation, url: category_transactions_url(category_id: id), method: :post do |f| %>
+    <div class="field">
+      <%= f.label :name %>
+      <%= f.text_field :name, autofocus: true, placeholder: 'Name (Minimun 3 characters)' %>
+    </div>
+
+    <div class="field">
+      <%= f.label :amount %>
+      <%= f.number_field :amount, autofocus: true, placeholder: 'Amount (Greater than 0)' %>
+    </div>
+
+    <div >
+      <%= f.label :categories%>
+      <%= f.select :categories, @categories.map { |t| [t.name, t.id]}, { :selected => id }, { :multiple => true, class: "categories"} %>
+    </div>
+
+    <div>
+      <%= f.submit "Save" %>
+    </div>
+  <% end %>
+</div>
