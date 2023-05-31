@@ -9,7 +9,7 @@ class TransactionsController < ApplicationController
     operation = Operation.new
     id = params[:category_id]
     respond_to do |format|
-        format.html { render :new, locals: { operation:, id: } }
+      format.html { render :new, locals: { operation:, id: } }
     end
   end
 
@@ -20,15 +20,15 @@ class TransactionsController < ApplicationController
     transaction = Operation.new(name:, amount:)
     transaction.user = current_user
     respond_to do |format|
-        format.html do
-            if transaction.save
-                create_relation(categories, transaction, params[:id])
-            else
-                @categories = current_user.groups
-                flash.now[:alert] = 'Error: Please make sure to fill all fields with the proper input'
-                render :new, status: 422, locals: { operation: transaction, id: params[:categories_id] }
-            end
+      format.html do
+        if transaction.save
+          create_relation(categories, transaction, params[:id])
+        else
+          @categories = current_user.groups
+          flash.now[:alert] = 'Error: Please make sure to fill all fields with the proper input'
+          render :new, status: 422, locals: { operation: transaction, id: params[:categories_id] }
         end
+      end
     end
   end
 
@@ -44,18 +44,18 @@ class TransactionsController < ApplicationController
 
     # Id no category was selected
     if categories.empty?
-        @categories = current_user.groups
-        flash.now[:alert] = 'Error: Please make sure to fill all fields with the proper input'
-        render :new, status: 422, locals: { operation: transaction, id: }
-        return
+      @categories = current_user.groups
+      flash.now[:alert] = 'Error: Please make sure to fill all fields with the proper input'
+      render :new, status: 422, locals: { operation: transaction, id: }
+      return
     end
 
     first_category_id = categories[0]
 
     # Itereates through the cateories and create relationships witht the operation
     categories.each_with_index do |category_id, _index|
-        group = Group.find(category_id)
-        MoneyGroup.create(group:, operation: transaction)
+      group = Group.find(category_id)
+      MoneyGroup.create(group:, operation: transaction)
     end
     flash[:notice] = 'Transaction created successfully'
     redirect_to(category_transactions_path(category_id: first_category_id))
