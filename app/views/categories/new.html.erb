@@ -1,18 +1,18 @@
 <%= render 'shared/header', :title => 'Category' %>
-<div>
-  <%= form_with model: group, url: categories_url, method: :post do |f| %>
+<div class="pt-5 flex flex-col items-center w-full">
+  <%= form_with model: group, url: categories_url, method: :post, class: 'w-full flex flex-col items-center' do |f| %>
     <div class="field">
-      <%= f.label :name %>
-      <%= f.text_field :name, autofocus: true, placeholder: 'Name (Minimun 3 characters)' %>
+      <%= f.label :name, class: 'hidden' %>
+      <%= f.text_field :name, autofocus: true, class: "w-96 border border-slate-300 hover:border-indigo-300  p-4", placeholder: 'Name (Minimun 3 characters)' %>
     </div>
 
     <div class="field">
-      <%= f.label :icon %>
-      <%= f.text_field :icon, autofocus: true, placeholder: 'Icon (Please add a proper URL)' %>
+      <%= f.label :icon, class: 'hidden' %>
+      <%= f.text_field :icon, autofocus: true, class: "w-96 border border-slate-300 hover:border-indigo-300 p-4", placeholder: 'Icon (Please add a proper URL)' %>
     </div>
 
     <div class="actions mt-5">
-      <%= f.submit "Save"%>
+      <%= f.submit "Save", class: "px-6 py-2 text-white bg-green-500" %>
     </div>
   <% end %>
 </div>

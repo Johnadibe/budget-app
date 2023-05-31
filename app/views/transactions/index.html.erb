@@ -1,15 +1,15 @@
-<section>
- <%= render 'shared/header', :title => 'Transactions' %>
-  <div>
-    <h2> Total amount: $<%= @group.total_amount %> </h2>
+<section id="transactions" class="bg-slate-300 w-full min-h-screen relative flex flex-col justify-between">
+  <%= render 'shared/header', :title => 'Transactions' %>
+  <div class="w-full flex justify-between items-center p-3 bg-white m-6 mx-4 mr-4">
+    <h2 class="text-xl font-semibold"> Total amount: $<%= @group.total_amount %> </h2>
   </div>
-  <ul>
+  <ul class="transactions p-3 flex flex-col w-full gap-3 box-border">
     <% @transactions.each do |transaction| %>
-      <li>
-        <h2> <%= transaction.name %> </h2>
-        <p> $<%= transaction.amount %> </p>
+      <li class="transaction w-full flex justify-between items-center p-3 bg-white flex-wrap gap-5">
+        <h2 class="text-tertiary-500 text-lg"> <%= transaction.name %> </h2>
+        <p class="font-semibold text-lg"> $<%= transaction.amount %> </p>
       </li>
     <% end %>
   </ul>
-  <%= link_to 'Add a new transaction', new_category_transaction_path(category_id: @group.id) %>
+  <%= link_to 'Add a new transaction', new_category_transaction_path(category_id: @group.id), class: "btn" %>
 </section>
