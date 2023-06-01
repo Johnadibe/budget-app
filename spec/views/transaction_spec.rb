@@ -4,7 +4,8 @@ RSpec.describe 'Testing category views', type: :feature do
   describe 'Category#index' do
     before(:each) do
       user = User.create(name: 'Tom', email: 'tommy@example.com', password: 'password')
-      category = user.groups.create(name: 'Bag', icon: 'https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?auto=compress&cs=tinysrgb&w=600') 
+      category = user.groups.create(name: 'Bag',
+                                    icon: 'https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?auto=compress&cs=tinysrgb&w=600')
 
       visit new_user_session_path
       fill_in 'Email', with: 'tommy@example.com'

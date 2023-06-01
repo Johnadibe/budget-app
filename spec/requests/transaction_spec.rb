@@ -5,8 +5,10 @@ RSpec.describe 'Transactions', type: :request do
     before(:each) do
       user = User.create name: 'John', email: 'johnadibe1234@example.com', password: '111111'
       post user_session_path, params: { user: { email: user.email, password: user.password } }
-      @category = Group.create(name: 'Bag', icon: 'https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?auto=compress&cs=tinysrgb&w=600', user_id: user.id) 
-      @transaction = Operation.create(name: 'Bobby', amount: 12, user_id: user.id) 
+      @category = Group.create(name: 'Bag',
+                               icon: 'https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?auto=compress&cs=tinysrgb&w=600',
+                               user_id: user.id)
+      @transaction = Operation.create(name: 'Bobby', amount: 12, user_id: user.id)
       get category_transactions_path(@category)
     end
 
