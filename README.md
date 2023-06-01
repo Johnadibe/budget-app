@@ -40,10 +40,9 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **[Add Logon and Registration Page]**
-- **[Add Food List and Recipe List]**
-- **[Add Public Recipe List]**
-- **[Add Recipe Details and General shopping list view]**
+- **[Add Login and Registration Page]**
+- **[Add Categories Page]**
+- **[Add Transactions Page]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -77,7 +76,7 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git clone https://github.com/nickemma/Spendless-App.git
+  git clone https://github.com/Johnadibe/budget-app.git
 ```
 
 ### Install
@@ -147,7 +146,7 @@ If you like this project please leave a STAR to the [Github repo](https://github
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to appreciate [Microverse](https://www.microverse.org/) for providing the resources and the platform for us to be a Professional full-stack developer.
+I would like to appreciate [Creative Commons License of the design](https://creativecommons.org/licenses/by-nc/4.0/) for providing all the template colors, font, and layout distribution for the whole project were designed by [Gregoire Vella](https://www.behance.net/gregoirevella) on Behance. A link to the project [can be found here](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=). Check Gregoire for more amazing GUI and Graphic designs!
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
