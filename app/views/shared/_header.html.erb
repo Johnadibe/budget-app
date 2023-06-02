@@ -1,0 +1,13 @@
+<header class="flex p-5 sticky top-0 text-white bg-[#3778c2] items-center justify-center z-20 box-border">
+  <%= link_to '/', class: 'absolute left-3', id: 'Home' do %>
+    <span class="fa-regular fa-arrow-left text-2xl font-bold">
+    </span>
+  <% end %>
+  <h2 class="text-xl xl:text-2xl uppercase text-light"><%= title %></h2>
+  <% if user_signed_in? %>
+    <%= link_to destroy_user_session_path, method: :delete, class: 'absolute right-0 h-full flex items-center px-2 box-border' do %>
+      <span class="fa-solid fa-arrow-right-to-bracket text-2xl font-bold">
+      </span>
+    <% end %>
+  <% end %>
+</header>
