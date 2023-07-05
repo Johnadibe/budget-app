@@ -23,7 +23,7 @@
 
 # 📖 [BUDGET-APP] <a name="about-project"></a>
 
-**[BUDGET-App]** This is a Ruby on Rails mobile web application that allows users to keep track of their expenses and categories. have a list of transactions associated with a category, so that the user can see how much money it spent and on what. Manage your own money, manage your own life.
+**[BUDGET-App]** This is a Ruby on Rails mobile web application that allows users to keep track of their expenses and categories. have a list of transactions associated with a category, so that the user can see how much money it spent and what. Manage your own money, manage your own life.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -138,7 +138,7 @@ Feel free to check the [issues page](https://github.com/Johnadibe/recipe-app/iss
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project please leave a STAR to the [Github repo](https://github.com/Johnadibe/blog_app/issues)
+If you like this project please leave a STAR on the [Github repo](https://github.com/Johnadibe/blog_app/issues)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -146,7 +146,7 @@ If you like this project please leave a STAR to the [Github repo](https://github
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to appreciate [Creative Commons License of the design](https://creativecommons.org/licenses/by-nc/4.0/) for providing all the template colors, font, and layout distribution for the whole project were designed by [Gregoire Vella](https://www.behance.net/gregoirevella) on Behance. A link to the project [can be found here](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=). Check Gregoire for more amazing GUI and Graphic designs!
+I would like to appreciate [Creative Commons License of the design](https://creativecommons.org/licenses/by-nc/4.0/) for providing all the template colors, font, and layout distribution for the whole project was designed by [Gregoire Vella](https://www.behance.net/gregoirevella) on Behance. A link to the project [can be found here](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=). Check Gregoire for more amazing GUI and Graphic designs!
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
